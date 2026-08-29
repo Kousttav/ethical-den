@@ -43,3 +43,46 @@
 .square{
     grid-column: span 1;
 }
+/* ==========================
+   Gallery Mobile (430px)
+========================== */
+@media screen and (max-width: 500px) {
+
+  .gallery {
+    margin-top: 70px;
+    padding: 0 20px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 30px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 42px;
+  }
+
+  .gallery-heading p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .rectangle,
+  .square {
+    grid-column: span 1;
+  }
+}

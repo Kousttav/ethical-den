@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import img1 from "../assets/massart.png";
 
 const Award = () => {
@@ -15,6 +15,14 @@ const Award = () => {
       prev === 0 ? awards.length - 1 : prev - 1
     );
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="award">
@@ -42,8 +50,19 @@ const Award = () => {
           ←
         </button>
 
-        <div className="mobile-slide">
-          <img src={awards[current]} alt="Award" />
+        <div className="slider-wrapper">
+          <div
+            className="slider-track"
+            style={{
+              transform: `translateX(-${current * 100}%)`,
+            }}
+          >
+            {awards.map((award, index) => (
+              <div className="slide" key={index}>
+                <img src={award} alt="Award" />
+              </div>
+            ))}
+          </div>
         </div>
 
         <button className="arrow right" onClick={nextSlide}>
