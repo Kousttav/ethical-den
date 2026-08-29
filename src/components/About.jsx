@@ -55,7 +55,7 @@ const About = () => {
       </div>
 
       {/* Mobile Slider */}
-      <div className="mobile-slider">
+      <div className="award-mobile-slider ">
         <img
           src={images[current]}
           alt=""
@@ -63,14 +63,14 @@ const About = () => {
         />
 
         <button
-          className="slider-btn prev"
+          className="arrow left"
           onClick={prevSlide}
         >
           ❮
         </button>
 
         <button
-          className="slider-btn next"
+          className="arrow right"
           onClick={nextSlide}
         >
           ❯
