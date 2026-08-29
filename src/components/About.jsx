@@ -55,24 +55,29 @@ const About = () => {
       </div>
 
       {/* Mobile Slider */}
-      <div className="award-mobile-slider ">
-        <img
-          src={images[current]}
-          alt=""
-          className="slider-image"
-        />
-
-        <button
-          className="arrow left"
-          onClick={prevSlide}
+      <div className="mobile-slider">
+        <div
+          className="slider-track"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+          }}
         >
+          {images.map((img, index) => (
+            <div className="slide" key={index}>
+              <img
+                src={img}
+                alt={`slide-${index}`}
+                className="slider-image"
+              />
+            </div>
+          ))}
+        </div>
+
+        <button className="slider-btn prev" onClick={prevSlide}>
           ❮
         </button>
 
-        <button
-          className="arrow right"
-          onClick={nextSlide}
-        >
+        <button className="slider-btn next" onClick={nextSlide}>
           ❯
         </button>
 
