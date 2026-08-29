@@ -1,0 +1,38 @@
+.news {
+  padding: 120px 60px;
+}
+
+.heading h2 {
+  color: #fff;
+  font-size: 70px;
+  margin-bottom: 60px;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.card p {
+  color: #d0d0d0;
+  font-size: 13px;
+  line-height: 2;
+  max-width: 95%;
+}
