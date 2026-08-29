@@ -29,19 +29,19 @@ const Navbar = () => {
           </li>
 
           <li>
-            <NavLink to="/service">Service</NavLink>
+            <a href="#Features">Service</a>
           </li>
 
           <li>
-            <NavLink to="/">Album</NavLink>
+            <a href="#Galary">Album</a>
           </li>
 
           <li>
-            <NavLink to="/stories">Stories</NavLink>
+            <a href="#Dis">Stories</a>
           </li>
 
           <li>
-            <NavLink to="/blog">Blog</NavLink>
+            <a href="#Blog">Blog</a>
           </li>
         </ul>
 

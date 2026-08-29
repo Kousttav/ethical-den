@@ -43,7 +43,7 @@ const newsData = [
 
 const News = () => {
   return (
-    <section className={styles.news}>
+    <section className={styles.news} id="Blog">
       <div className={styles.heading}>
         <h2>
           Tala In <span>News</span>

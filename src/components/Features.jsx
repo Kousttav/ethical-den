@@ -7,7 +7,7 @@ import img5 from "../assets/20.png";
 
 const Features = () => {
     return (
-        <section className="features">
+        <section className="features" id='Features'>
 
             <div className="features-heading">
                 <h2>

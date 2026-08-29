@@ -3,7 +3,7 @@ import image1 from "../assets/11.png";
 import { FaRegCirclePlay } from "react-icons/fa6";
 const Discover = () => {
     return (
-        <div className="discover">
+        <div className="discover" id='Dis'>
 
             <div className="video-box">
                 <img src={image1} alt="" />
