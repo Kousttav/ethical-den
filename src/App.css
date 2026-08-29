@@ -475,49 +475,97 @@ img {
 }
 
 
-/*         Award Page       */
+/* Award Section */
 .award {
-    margin: 80px 0;
-    padding: 0 50px;
-    text-align: center;
+  margin: 100px 0;
+  padding: 0 50px;
+  text-align: center;
 }
 
 .award-heading h1 {
-    color: white;
-    font-size: 60px;
-    margin-bottom: 15px;
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 15px;
 }
 
 .award-heading p {
-    color: #d0d0d0;
-    max-width: 700px;
-    margin: 0 auto 80px;
-    line-height: 1.7;
+  color: #d0d0d0;
+  max-width: 700px;
+  margin: 0 auto 70px;
+  line-height: 1.8;
 }
 
+/* Desktop Awards */
 .award-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.award-item {
-    flex: 1;
-    min-width: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 
 .award-item img {
-    width: 120px;
-    height: auto;
-    transition: transform 0.3s ease;
+  width: 140px;
+  transition: 0.3s;
 }
 
 .award-item img:hover {
-    transform: scale(1.1);
+  transform: scale(1.08);
 }
 
+/* Hide Mobile Slider */
+.award-mobile-slider {
+  display: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 500px) {
+  .award {
+    padding: 0 20px;
+  }
+
+  .award-heading h1 {
+    font-size: 42px;
+  }
+
+  .award-heading p {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  /* Hide desktop row */
+  .award-container {
+    display: none;
+  }
+
+  /* Show mobile slider */
+  .award-mobile-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #050505;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .mobile-slide {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-slide img {
+    width: 180px;
+  }
+
+  .arrow {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 10px;
+  }
+}
 .advertise {
     width: 100%;
     margin: 120px 0;
@@ -1124,47 +1172,7 @@ img {
         font-size: 38px;
     }
 
-    /* Award */
-
-    .award-slider-container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    width:100%;
-    margin-top:40px;
-  }
-
-  .slider-wrapper{
-    width:220px;
-    overflow:hidden;
-  }
-
-  .slider-track{
-    display:flex;
-    transition:transform 0.5s ease-in-out;
-  }
-
-  .slide{
-    min-width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-
-  .slide img{
-    width:180px;
-    height:auto;
-  }
-
-  .arrow{
-    border:none;
-    background:none;
-    color:white;
-    font-size:35px;
-    cursor:pointer;
-  }
-
+    
     /* News */
 
     .news {
