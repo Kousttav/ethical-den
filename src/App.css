@@ -1208,6 +1208,9 @@ MOBILE NAVBAR
     flex-direction: column;
     padding: 0;
   }
+  .footer-col{
+    margin-bottom:20px;
+  }
 
   .footer-left {
     width: 100%;
