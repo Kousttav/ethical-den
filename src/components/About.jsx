@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
-
 import image1 from "../assets/12.png";
 import image2 from "../assets/13.png";
 import image3 from "../assets/14.png";
 
-const images = [image1, image2, image3];
-
 const About = () => {
+  const images = [image1, image2, image3];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const slider = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 3000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(slider);
   }, []);
 
   const nextSlide = () => {
@@ -28,7 +26,7 @@ const About = () => {
   };
 
   return (
-    <div className="about-page">
+    <section className="about-page">
       <div className="left-section">
         <div className="content">
           <h2>
@@ -36,30 +34,51 @@ const About = () => {
           </h2>
 
           <p>
-            Tala Prattoy upholds the art aspects of Durga Puja. Essence of
-            creativity combining the tools and methods of art and art
-            installations interpreting the formative stages of the festival.
-            Tala Prattoy’s work emphasis has always been on Durga Puja as a
-            specific art genre where the public space is being transformed into
-            an art venue.
+            Tala Prattoy upholds the art aspects of Durga Puja.
+            Essence of creativity combining the tools and methods
+            of art and installations interpreting the formative
+            stages of the festival. Tala Prattoy's work emphasis
+            has always been on Durga Puja as a specific art genre
+            where the public space is being transformed into an
+            art venue.
           </p>
         </div>
+
+        {/* Desktop Image */}
+        <img src={image3} alt="" className="desktop-img" />
       </div>
 
+      {/* Desktop Images */}
       <div className="right-section">
-        <div className="slider">
-          <img src={images[current]} alt="Tala" />
-
-          <button className="prev-btn" onClick={prevSlide}>
-            ❮
-          </button>
-
-          <button className="next-btn" onClick={nextSlide}>
-            ❯
-          </button>
-        </div>
+        <img src={image1} alt="" />
+        <img src={image2} alt="" />
       </div>
-    </div>
+
+      {/* Mobile Slider */}
+      <div className="mobile-slider">
+        <img
+          src={images[current]}
+          alt=""
+          className="slider-image"
+        />
+
+        <button
+          className="slider-btn prev"
+          onClick={prevSlide}
+        >
+          ❮
+        </button>
+
+        <button
+          className="slider-btn next"
+          onClick={nextSlide}
+        >
+          ❯
+        </button>
+
+        
+      </div>
+    </section>
   );
 };
 
