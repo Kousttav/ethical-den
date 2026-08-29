@@ -1226,4 +1226,10 @@ MOBILE NAVBAR
     transform: none;
     text-align: center;
   }
+
+.timeline-container::before {
+    display: none;
+}
+
+
 }
